@@ -136,6 +136,24 @@ function initJobs() {
       stats: { runs: 0, successes: 0, failures: 0, avgDuration: 0 },
       createdAt: '2026-02-10T16:00:00Z',
     },
+    {
+      id: 'job_upstream_sync',
+      name: 'BlackRoad-Private Upstream Sync',
+      description: 'Sync configuration and data from BlackRoad-Private upstream',
+      schedule: '*/10 * * * *',
+      scheduleHuman: 'Every 10 minutes',
+      timezone: 'UTC',
+      endpoint: 'https://blackroad-private.amundsonalexa.workers.dev/api/sync',
+      method: 'POST',
+      enabled: true,
+      retries: 3,
+      timeout: 45000,
+      lastRun: new Date(Date.now() - 600000).toISOString(),
+      nextRun: new Date(Date.now() + 60000).toISOString(),
+      status: 'active',
+      stats: { runs: 144, successes: 142, failures: 2, avgDuration: 823 },
+      createdAt: '2026-02-15T10:00:00Z',
+    },
   ];
 
   demoJobs.forEach(j => jobs.set(j.id, j));

@@ -26,6 +26,7 @@ Create and manage cron jobs with monitoring and execution logs.
 | Collect Metrics | Hourly | Aggregate analytics |
 | Database Backup | Weekly Sun 4 AM | Backup to R2 |
 | Weekly Report | Weekly Mon 9 AM | Send email report |
+| Upstream Sync | Every 10 min | Sync from BlackRoad-Private |
 
 ## API
 
